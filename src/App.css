@@ -1,10 +1,17 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-flow: row;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+
+.App > * {
+  padding: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
