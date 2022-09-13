@@ -8,9 +8,12 @@ export const SelectorFamily = () => {
 
   return (
     <div>
-      <h3>{"selectorFamily"}</h3>
+      <h3>{"selectorFamilyでフィルタする場所"}</h3>
+      <p>atomをフィルタする</p>
       <input value={input} onChange={(e) => setInput(e.target.value)} />
+
       <div>
+        <span>フィルタ結果↓</span>
         {todoList.map((todo, index) => {
           return <div key={index}>{`${todo.title}`}</div>;
         })}

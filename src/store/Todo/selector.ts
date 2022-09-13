@@ -1,6 +1,14 @@
 import { Todo } from "models/Todo";
-import { selectorFamily } from "recoil";
+import { selector, selectorFamily } from "recoil";
 import { todoListState } from "store/Todo/atom";
+
+export const doneTodoListSelector = selector<Todo[]>({
+  key: "doneTodoListSelector",
+  get: ({ get }) => {
+    const todoList = get(todoListState);
+    return todoList.filter((todo) => todo.done);
+  },
+});
 
 export const searchedTodoListSelector = selectorFamily<Todo[], string>({
   key: "searchedTodoListSelector",

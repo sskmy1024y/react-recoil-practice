@@ -1,13 +1,13 @@
+import { Selector } from "components/Selector";
 import "./App.css";
 import { ExampleAtom } from "./components/Atom";
-import { ExampleAtomFamily } from "./components/AtomFamily";
 import { SelectorFamily } from "./components/SelectorFamily";
 
 function App() {
   return (
     <div className="App">
       <ExampleAtom />
-      <ExampleAtomFamily />
+      <Selector />
       <SelectorFamily />
     </div>
   );
