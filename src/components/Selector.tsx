@@ -1,8 +1,7 @@
-import { useRecoilValue } from "recoil";
-import { doneTodoListSelector } from "store/Todo/selector";
+import { useDoneTodoList } from "store/Todo";
 
 export const Selector = () => {
-  const todoList = useRecoilValue(doneTodoListSelector);
+  const todoList = useDoneTodoList();
 
   return (
     <div>

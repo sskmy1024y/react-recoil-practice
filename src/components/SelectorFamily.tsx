@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { useRecoilValue } from "recoil";
-import { searchedTodoListSelector } from "store/Todo/selector";
+import { useSearchedTodoList } from "store/Todo";
 
 export const SelectorFamily = () => {
   const [input, setInput] = useState("");
-  const todoList = useRecoilValue(searchedTodoListSelector(input));
+  const todoList = useSearchedTodoList(input);
 
   return (
     <div>

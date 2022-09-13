@@ -1,10 +1,9 @@
 import { Todo } from "models/Todo";
 import { ChangeEvent, FormEvent, useState } from "react";
-import { useRecoilState } from "recoil";
-import { todoListState } from "store/Todo/atom";
+import { useTodoList } from "store/Todo";
 
 export const ExampleAtom = () => {
-  const [todoList, setTodoList] = useRecoilState(todoListState);
+  const [todoList, setTodoList] = useTodoList();
   const [input, setInput] = useState("");
 
   const handleAddTodo = (e: FormEvent) => {
